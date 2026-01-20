@@ -1,0 +1,36 @@
+{
+  "name": "commandpulse-desktop",
+  "version": "1.0.0",
+  "description": "CommandPulse Desktop App",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac"
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.7"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.commandpulse.desktop",
+    "productName": "CommandPulse",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "Sebasstianex",
+      "repo": "CommandPulse-Desktop"
+    }
+  }
+}
